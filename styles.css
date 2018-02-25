@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+}
+
+#super-table{
+    background: white;
+    position: absolute;
+    overflow: scroll;
+    top: 5vh;
+    left: 15vw;
+
+}
+
+
+.firstLine, .allUsers {
+    width: 2000px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+}
+.firstLine {
+    background: #690a9c;
+    color: white;
+    font-size: 1.2em;
+    height: 22px;
+
+}
+
+.id{
+    width: 260px;
+    text-align: center;
+    margin-top: 4px;
+}
+.index{
+    width: 50px;
+    text-align: center;
+    margin-top: 4px;
+}
+.name{
+   width: 200px;
+    text-align: center;
+    margin-top: 4px;
+}
+.email{
+    margin-top: 4px;
+    width: 300px;
+    text-align: center;
+}
+.gender{
+    margin-top: 4px;
+    width: 100px;
+    text-align: center;
+}
+.isActive{
+    margin-top: 4px;
+   width: 80px;
+    text-align: center;
+}
+.age{
+    margin-top: 4px;
+    width: 50px;
+    text-align: center;
+}
+.eyeColor{
+    margin-top: 4px;
+    width: 80px;
+    text-align: center;
+}
+.company{
+    margin-top: 4px;
+   width: 150px;
+    text-align: center;
+}
+.phone{
+    margin-top: 4px;
+    width: 170px;
+    text-align: center;
+}
+.address{
+    margin-top: 4px;
+    width: 420px;
+    text-align: center;
+}
+.registered {
+    margin-top: 4px;
+    width: 200px;
+    text-align: center;
+}
+div.gender {
+    z-index: 2;
+}
