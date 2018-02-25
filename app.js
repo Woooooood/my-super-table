@@ -9,8 +9,8 @@ window.onload = function() {
             rowHeight : 30,
             tableHeight: 70,
             tableWidth: 70,
-            rowMouseOver: false,
-            rowStyle: 'line',
+            rowMouseOver: true,
+            rowStyle: 'zebra',
             fixedHeader: true,
             fixedColumn: true
         }
@@ -52,9 +52,11 @@ window.onload = function() {
         superTable.style.height= table.options.tableHeight + "vh";
         if (table.options.tableHeight > 80) {
             alert('The maximum  size of the table is 80 !');
-            superTable.style.height= table.options.tableHeight = 80;
         }
         superTable.style.width = table.options.tableWidth + "vw";
+        if (table.options.tableWidth > 85) {
+            alert('The maximum  width of the table is 85 !');
+        }
 
 
 
@@ -80,7 +82,7 @@ window.onload = function() {
             firstLine.style.zIndex = '1';
         }
 
-        if (table.options.rowHeight === 'undefined') {
+        if (table.options.rowHeight === null) {
             var lines = document.querySelectorAll('.allUsers');
             for (var i = 0; i < lines.length; i++) {
                 lines[i].style.height = '30px';
@@ -93,12 +95,7 @@ window.onload = function() {
                 lines[i].onmouseover = function () {
                     this.style.background = '#99151b';
                 };
-                if (table.options === true){
-                    lines[i].onmouseout = function () {
-                        this.style.background = '#000'
-                    }
-                }
-                else lines[i].onmouseout = function () {
+                lines[i].onmouseout = function () {
                     this.style.background = '#fff';
                 }
             }

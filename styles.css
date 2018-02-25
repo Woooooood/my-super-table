@@ -12,19 +12,24 @@ body{
 }
 
 
-.firstLine, .allUsers {
+.firstLine{
+    width: 2000px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    background: #690a9c;
+    color: white;
+    font-size: 1.2em;
+    height: 22px;
+}
+
+.allUsers{
     width: 2000px;
     height: 25px;
     display: flex;
     flex-direction: row;
 }
-.firstLine {
-    background: #690a9c;
-    color: white;
-    font-size: 1.2em;
-    height: 22px;
 
-}
 
 .id{
     width: 260px;
