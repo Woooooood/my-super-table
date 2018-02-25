@@ -9,6 +9,9 @@ window.onload = function() {
             rowHeight : 30,
             tableHeight: 70,
             tableWidth: 70,
+            tableBackgroundColor: 'white',
+            tableTextColor:'black',
+            tableHoverColor: 'red',
             rowMouseOver: true,
             rowStyle: 'zebra',
             fixedHeader: true,
@@ -24,27 +27,25 @@ window.onload = function() {
             var user = table.data[i];
         }
         for (var i in user) {
-            var item = document.createElement('div');
-            item.classList.add(i);
-            firstLine.appendChild(item);
-            item.innerHTML += i;
+            var items = document.createElement('div');
+            items.classList.add(i);
+            firstLine.appendChild(items);
+            items.innerHTML += i;
         }
         var users = document.createElement('div');
         table.element.appendChild(users);
         users.classList.add('users');
 
         for (var i in table.data) {
-            user = table.data[i];
-
             var allUsers = document.createElement('div');
             allUsers.classList.add("allUsers");
             users.appendChild(allUsers);
 
             for (var i in user){
-                var itemUser = document.createElement('div');
-                itemUser.classList.add(i);
-                allUsers.appendChild(itemUser);
-                itemUser.innerHTML = user[i];
+                var itemUsers = document.createElement('div');
+                itemUsers.classList.add(i);
+                allUsers.appendChild(itemUsers);
+                itemUsers.innerHTML = user[i];
             }
         }
 
@@ -58,6 +59,8 @@ window.onload = function() {
             alert('The maximum  width of the table is 85 !');
         }
 
+        superTable.style.backgroundColor = table.options.tableBackgroundColor;
+        superTable.style.color = table.options.tableTextColor;
 
 
         var firstColumn = document.querySelectorAll('.' + table.options.firstColumn);
@@ -93,10 +96,10 @@ window.onload = function() {
             lines[i].style.height = table.options.rowHeight + "px";
             if (table.options.rowMouseOver === true){
                 lines[i].onmouseover = function () {
-                    this.style.background = '#99151b';
+                    this.style.background = table.options.tableHoverColor;
                 };
                 lines[i].onmouseout = function () {
-                    this.style.background = '#fff';
+                    this.style.background = table.options.tableBackgroundColor;
                 }
             }
 
